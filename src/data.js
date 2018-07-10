@@ -1,6 +1,5 @@
 // var defaultValues = (() => Array(100).fill(Array(100).fill('#F00')))()
 
-
 // var rgbToHex = function (rgb) { 
 //   var hex = Number(rgb).toString(16);
 //   if (hex.length < 2) {
@@ -16,12 +15,6 @@
 //     console.log("Bad image path")
 //     return
 //   }
-  // console.log("got pixels", pixels.shape)
-  // console.log(pixels.data.length);
-  // console.log(pixels.get(15, 20, 0));
-  // console.log(pixels.get(15, 20, 1));
-  // console.log(pixels.get(15, 20, 2));
-  // console.log(pixels.get(15, 20, 3));
 
 //   const x = []
 //   for (let y = 0; y < 100; y++) {
@@ -34,7 +27,6 @@
 //   }
 //   console.log(x);
 // })
-//
 
 var chromeBoi = [ [ '#000',
     '#000',
