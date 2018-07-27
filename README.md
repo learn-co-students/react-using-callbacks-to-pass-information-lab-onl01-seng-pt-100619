@@ -58,6 +58,7 @@ way_ to fire off that method we wrote for Matrix (hint: consider using an event
 listener and controlling the argument when an event handler is fired)
 
 #### `Cell`
+
 - find a way to access the currently selected color from `Matrix`'s state
 _without_ passing the value explicitly as a prop. (Consider passing a method
 from `Matrix` to `Cell` instead. You will want to create an additional method in
