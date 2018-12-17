@@ -1,11 +1,9 @@
 # React Using Callbacks to Pass Information Lab
 
-
 ## Objectives
 
-1. Practice using state, props, and events
-2. Practice using callbacks to effect change up and down the component tree
-
+1.  Practice using state, props, and events
+2.  Practice using callbacks to effect change up and down the component tree
 
 ## Introduction
 
@@ -23,7 +21,7 @@ For this lab, we have three components:
 ```
 └── Matrix
     ├── ColorSelector
-    └── Cell (x1000)
+    └── Cell (x10000)
 ```
 
 We would like to implement the following behavior: when a `Cell` is clicked, its
@@ -43,29 +41,47 @@ Using callbacks, we can do both of these things pretty easily!
 
 ## Deliverables
 
+**Note:** This lab involves rendering 100,000 `Cell` components, and may cause performance issues for older Macbooks. For a more performant lab experience, in `src/index.js`, replace:
+
+```js
+ReactDOM.render(<Matrix values={chromeBoi} />, document.getElementById('root'));
+```
+
+..with this:
+
+```js
+ReactDOM.render(
+	<Matrix values={chromeBoi.slice(0, 10)} />,
+	document.getElementById('root')
+);
+```
+
+This will reduce the amount of `Cell` components that will render when you've
+got your code fully working.
+
 #### `Matrix`
+
 - provide a way for `Matrix` to keep track of the selected color (think state!)
 - write a method that takes in a single argument of a hex color string (i.e.
-'#fff') and sets the selected color to that
+  '#fff') and sets the selected color to that
 - consider what should be done with that method once it is written. Who needs it?
-How can we get it to them? Use the skills you already have with React to solve
-this
+  How can we get it to them? Use the skills you already have with React to solve
+  this
 
 #### `ColorSelector`
 
 - update `makeColorSwatches` to provide the `<div>`s it is rendering with _some
-way_ to fire off that method we wrote for Matrix (hint: consider using an event
-listener and controlling the argument when an event handler is fired)
+  way_ to fire off that method we wrote for Matrix (hint: consider using an event
+  listener and controlling the argument when an event handler is fired)
 
 #### `Cell`
 
 - find a way to access the currently selected color from `Matrix`'s state
-_without_ passing the value explicitly as a prop. (Consider passing a method
-from `Matrix` to `Cell` instead. You will want to create an additional method in
-Matrix to do this.)
+  _without_ passing the value explicitly as a prop. (Consider passing a method
+  from `Matrix` to `Cell` instead. You will want to create an additional method in
+  Matrix to do this.)
 - implement a `handleClick` method that that updates the `Cell`'s state with the
-current selected color
-
+  current selected color
 
 #### Once Finished
 
