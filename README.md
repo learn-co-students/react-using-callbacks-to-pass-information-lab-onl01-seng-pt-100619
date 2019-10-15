@@ -92,7 +92,7 @@ of the screen. When any of the color swatches in the color selection `<div>` are
 clicked, subsequently selected cells should change to that color.
 
 <p align="center">
-  <img src="src/completed-example.gif" />
+  <img src="https://curriculum-content.s3.amazonaws.com/react/completed-example.gif" />
 </p>
 
 ## Resources
