@@ -7,14 +7,13 @@
 
 ## Introduction
 
-In React, **props** are used to pass information _down_ the component tree, from
-parents to children. In order to propagate information in the opposite
-direction, we can use callback functions that are passed from parent components
-to children.
+Go ahead and open this lab using `npm start` (you might need to do `npm install`) first. You should see our good friend, ChromeBoi. We are going to build an application that allows the user to select any of the 9 colored squares at the top of the page by clicking on it.
+Then, the user can click on any of the cells that make up our ChromeBoi image to change the background color to the color that they last selected. The end result is that the user will be able to 'paint' over ChromeBoi.
 
-This allows the callback to be _owned_ by a different component than the one
-invoking it. Once invoked, the callback can effect change in the component that
-owns it, instead of the component that called it.
+<p align="center">
+  <img src="https://curriculum-content.s3.amazonaws.com/react/completed-example.gif" />
+</p>
+
 
 For this lab, we have three components:
 
@@ -24,20 +23,16 @@ For this lab, we have three components:
     └── Cell (x10000)
 ```
 
-We would like to implement the following behavior: when a `Cell` is clicked, its
-background color becomes the current selected color. With our `ColorSelector`
-component providing the user interface to select a specific color, we need _some
-way_ for `Cell` to know about the currently selected color. To do this, we will
-have the parent component, `Matrix`, keep track of the current selected color.
+The `ColorSelector` component is where the user sets one of the 9 colors as the current selected color. We are going to need some state to keep track of this current selected color. Now, we could put this state in our `ColorSelector` component, but there's one caveat. When a `Cell` component is clicked, its background color should become the current selected color. So we need _some way_ for `Cell` to know about the currently selected color.
 
-Because passing information between children components is taboo in React, (i.e.
-passing information between `ColorSelector` and a `Cell`), we need to make sure
-that the following is implemented:
+But passing information directly between children components is not possible in React, (i.e.
+passing information between `ColorSelector` and a `Cell`).
 
-- `ColorSelector` has a way to set some 'selected color' in `Matrix` when a user selects a color
-- `Cell` has a way to know what the current selected color is when it is clicked
+We can put our state in the the parent component, `Matrix`. With this approach two things are possible:
+ - `ColorSelector` has a way to set some 'selected color' in `Matrix` when a user selects a color
+ - `Cell` has a way to know what the current selected color is when it is clicked
 
-Using callbacks, we can do both of these things pretty easily!
+ Using callbacks and props, we can do both of these things pretty easily!
 
 ## Deliverables
 
@@ -61,16 +56,16 @@ got your code fully working.
 
 #### `Matrix`
 
-- provide a way for `Matrix` to keep track of the selected color (think state!)
-- write a method that takes in a single argument of a hex color string (i.e.
-  '#fff') and sets the selected color to that
-- consider what should be done with that method once it is written. Who needs it?
+- Create state in `Matrix` to keep track of the current selected color
+- Write a method that takes in a single argument of a hex color string (i.e.
+  '#FFF') and sets the selected color to that
+- Consider what should be done with that method once it is written. Who needs it?
   How can we get it to them? Use the skills you already have with React to solve
-  this
+  this.
 
 #### `ColorSelector`
 
-- update `makeColorSwatches` to provide the `<div>`s it is rendering with _some
+- Update `makeColorSwatches` to provide the `<div>`s it is rendering with _some
   way_ to fire off that method we wrote for Matrix (hint: consider using an event
   listener and controlling the argument when an event handler is fired)
 
@@ -83,7 +78,7 @@ got your code fully working.
 - implement a `handleClick` method that that updates the `Cell`'s state with the
   current selected color
 
-#### Once Finished
+### Once Finished
 
 **Assert the following behavior**:
 
@@ -91,9 +86,6 @@ You should see 100x100 cells rendering with a color selection `<div>` at the top
 of the screen. When any of the color swatches in the color selection `<div>` are
 clicked, subsequently selected cells should change to that color.
 
-<p align="center">
-  <img src="https://curriculum-content.s3.amazonaws.com/react/completed-example.gif" />
-</p>
 
 ## Resources
 
