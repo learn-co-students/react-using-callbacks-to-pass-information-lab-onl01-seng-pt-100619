@@ -7,7 +7,7 @@
 
 ## Introduction
 
-Go ahead and open this lab using `npm start` (you might need to do `npm install`) first. You should see our good friend, ChromeBoi. We are going to build an application that allows the user to select any of the 9 colored squares at the top of the page by clicking on it.
+Go ahead and open this lab using `npm start` (you might need to do `npm install`) first. You should see our friend, [ChromeBoi][legend]. We are going to build an application that allows the user to select any of the 9 colored squares at the top of the page by clicking on it.
 Then, the user can click any cells that make up our ChromeBoi image to change the background color of those cell to the color that they last selected. The end result is that the user will be able to 'paint' over ChromeBoi.
 
 <p align="center">
@@ -86,3 +86,5 @@ clicked, subsequently selected cells should change to that color like shown in g
 ## Resources
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/react-using-callbacks-to-pass-information-lab'>React Using Callbacks to Pass Information Lab</a> on Learn.co and start learning to code for free.</p>
+
+[legend]: https://en.everybodywiki.com/Chrome_Boi
