@@ -71,11 +71,8 @@ got your code fully working.
 
 #### `Cell`
 
-- find a way to access the currently selected color from `Matrix`'s state
-  _without_ passing the value explicitly as a prop. (Consider passing a method
-  from `Matrix` to `Cell` instead. You will want to create an additional method in
-  Matrix to do this.)
-- implement a `handleClick` method that that updates the `Cell`'s state with the
+- Find a way to access the currently selected color from `Matrix`'s state.
+- Implement a `handleClick` method that updates the `Cell`'s state with the
   current selected color
 
 ### Once Finished
@@ -84,7 +81,7 @@ got your code fully working.
 
 You should see 100x100 cells rendering with a color selection `<div>` at the top
 of the screen. When any of the color swatches in the color selection `<div>` are
-clicked, subsequently selected cells should change to that color.
+clicked, subsequently selected cells should change to that color like shown in gif above.
 
 
 ## Resources

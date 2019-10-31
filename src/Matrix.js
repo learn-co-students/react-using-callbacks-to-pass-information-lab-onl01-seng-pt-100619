@@ -17,7 +17,6 @@ export default class Matrix extends Component {
     this.props.values.map((rowVals, idx) => <div key={idx} className="row">{this.genRow(rowVals)}</div>)
   )
 
-
   render() {
     return (
       <div id="app">
@@ -28,7 +27,6 @@ export default class Matrix extends Component {
       </div>
     )
   }
-
 }
 
 Matrix.defaultProps = {
