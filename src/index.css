@@ -12,15 +12,15 @@ body, html, #root, #app {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 800px;
-  width: 800px;
-  min-width: 800px;
-  min-height: 800px;
+  height: 400px;
+  width: 400px;
+  min-width: 400px;
+  min-height: 400px;
   background-color: #bbb;
 }
 
 .row {
-  width: 800px;
+  width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
