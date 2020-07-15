@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export default class Cell extends Component {
   
   constructor(props) {
-    super()
+    super(props)
     this.state = {
-      color: props.color
+      color: this.props.color
     }
   }
 
@@ -18,7 +18,7 @@ export default class Cell extends Component {
   render() {
     return (
       <div className="cell" style={{backgroundColor: this.state.color}}
-        
+        style={{backgroundColor: this.state.color}}
         >
         
       </div>
