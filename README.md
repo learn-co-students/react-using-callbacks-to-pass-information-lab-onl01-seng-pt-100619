@@ -436,3 +436,4 @@ One way of thinking about this is that _information_ is passed **down** from
 parent to child. Sometimes, that information can contain the instructions, in
 the form of callbacks, for sending _actions_ **up**. This pattern is useful to
 keep in mind as we build out more complex component trees.
+
